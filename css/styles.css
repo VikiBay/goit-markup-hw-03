@@ -30,7 +30,15 @@ body{
     }
 
     img{
-        display: flex;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+    padding-bottom:var(--typical-padding);
+    padding-top:var(--typical-padding);   
+
     }
     .container{
         width: 1200px;
@@ -46,6 +54,7 @@ body{
         text-align: center;
         cursor: pointer;
         border: transparent;
+        border-radius: 4px;
         }
         
         .btn:hover,
@@ -161,10 +170,7 @@ margin: auto;
     color: var(--maintext-color);
 }
 /* -----------------------------------------------ADVANTAGES---------------------------------------------- */
-.advantages{
-padding-bottom:var(--typical-padding);
-padding-top:var(--typical-padding);    
-}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -177,6 +183,10 @@ padding-top:var(--typical-padding);
 
 .advantages-list{
     display: flex;
+}
+
+.advantages-item:not(:first-child){
+    margin-left: 30px;
 }
 
 .advantages-list-headers{
@@ -194,8 +204,9 @@ color: var(--secondtext-color);
 }
 
 .whatwedo{
-    padding-bottom: var(--typical-padding);
+    padding-top: 0;
     }
+
 .whatwedo-list{
     display: flex;
 }
@@ -206,8 +217,6 @@ color: var(--secondtext-color);
 
 .team{
 background: var(--background-medium-color);
-padding-top: var(--typical-padding);
-padding-bottom: var(--typical-padding);
 }
 
 .basic-title{
@@ -219,6 +228,13 @@ letter-spacing: 0.03em;
 }
 .team-list{
     display: flex;
+}
+
+.team-list-item {
+background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+
 }
 
 .team-list-item:not(:first-child){
@@ -293,11 +309,6 @@ color: rgba(255, 255, 255, 0.6);
 color: var(--accent-color);
 }
 
-.portfolio {
-    padding-top: var(--typical-padding);
-    padding-bottom: var(--typical-padding);
-}
-
 .portfolio-list-btn{
     display: flex;
     justify-content: center;
@@ -314,6 +325,7 @@ margin-bottom: -30px;
 .portfolio-item{
     margin-left: var(--typical-margin);
     margin-bottom: var(--typical-margin);
+    flex-basis: calc((100% - 90px) / 3);
 }
 
 .portfolio-list-title {
@@ -321,6 +333,7 @@ font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
 color: var(--maintext-color);
+margin-bottom: 4px;
 }
 
 .portfolio-list-text{
